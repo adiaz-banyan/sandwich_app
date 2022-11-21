@@ -1,0 +1,45 @@
+{% load static %}
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="{% static 'menu.css' %}" />
+  <title>Sandwich Menu</title>
+</head>
+<body>
+  <h1>Sandwich Menu!</h1>
+  <div class="menu-container">
+    <div>
+      <h2>Some Meats</h2>
+      {% for meat in meats %}
+      <p>{{ meat }}</p>
+      {% endfor %}
+    </div>
+    <div>
+      <h2>Some Cheeses</h2>
+      {% for cheese in cheeses %}
+      <p>{{ cheese }}</p>
+      {% endfor %}
+    </div>
+    <div>
+      <h2>Some Toppings</h2>
+      {% for topping in toppings %}
+      <p>{{ topping }}</p>
+      {% endfor %}
+    </div>
+  </div>
+
+  <div>
+    <h1>All possible combos</h1>
+    <div class="sandwich-card">
+      {% for sandwich in all_combos %}
+      <div>
+        <h4>Meat: {{sandwich.meat}}</h4>
+        <h4>Toppings: {{sandwich.toppings}}</h4>
+        <h4>Cheeses: {{sandwich.cheese}}</h4>
+      </div>
+
+      {% endfor %}
+    </div>
+  </div>
+</body>

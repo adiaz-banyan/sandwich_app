@@ -1,0 +1,18 @@
+.menu-container {
+  display: flex;
+  background: rgba(128, 128, 128, 0.603);
+  border-radius: 5px;
+  justify-content: space-between;
+  padding: 10px 50px;
+}
+
+.sandwich-card {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+.sandwich-card div {
+  padding: 15px;
+  background: goldenrod;
+  border-radius: 5px;
+}
